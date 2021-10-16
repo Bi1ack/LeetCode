@@ -6,6 +6,7 @@ public class SumofSquareNumbers {
     /*
     @date: 2021/10/16
     @633 Sum of Square Numbers
+    @a test
      */
 
     public static boolean judgeSquareSum(int c) {
