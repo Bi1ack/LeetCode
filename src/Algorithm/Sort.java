@@ -187,8 +187,6 @@ public class Sort {
             // count[i] 当前位(d位)是(0~i)的数字有多少个
             int[] count = new int[radix]; // count[0..9]
             for (i = L; i <= R; i++) {
-                // 103  1   3
-                // 209  1   9
                 j = getDigit(arr[i], d);
                 count[j]++;
             }
@@ -206,6 +204,7 @@ public class Sort {
         }
     }
 
+    //得到d位上的数字
     public static int getDigit(int x, int d) {
         return ((x / ((int) Math.pow(10, d - 1))) % 10);
     }
