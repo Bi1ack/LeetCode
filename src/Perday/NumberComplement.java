@@ -5,7 +5,6 @@ public class NumberComplement {
     /**
      * @author zr
      * @date 2021.10.18
-     * @return
      */
 
     public static int findComplement(int num) {
