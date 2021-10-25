@@ -46,7 +46,6 @@ public class KthLargestElement {
             index = par;
             par = (index - 1) / 2;
         }
-        return arr[0];
     }
 
     public static void heapify(int[] arr, int index, int heapSize) {
