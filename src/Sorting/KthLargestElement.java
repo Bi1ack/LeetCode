@@ -13,23 +13,31 @@ public class KthLargestElement {
      */
     public static int findKthLargest(int[] arr, int k) {
         //todo
-        int res = 0;
-        return res;
-    }
-
-    public static void heapSort(int[] arr) {
-        //建堆
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < k; i++) {
             heapInsert(arr, i);
         }
-        //堆化
-        int heapSize = arr.length;
-        swap(arr, 0, --heapSize);
-        while (heapSize > 0) {
-            heapify(arr, 0, heapSize);
-            swap(arr, 0, --heapSize);
+        for (int i = k; i < arr.length; i++) {
+            if (arr[i] > arr[0]) {
+                swap(arr, 0, i);
+                heapify(arr, 0, k);
+            }
         }
+        return arr[0];
     }
+
+//    public static void heapSort(int[] arr) {
+//        //建堆
+//        for (int i = 0; i < arr.length; i++) {
+//            heapInsert(arr, i);
+//        }
+//        //堆化
+//        int heapSize = arr.length;
+//        swap(arr, 0, --heapSize);
+//        while (heapSize > 0) {
+//            heapify(arr, 0, heapSize);
+//            swap(arr, 0, --heapSize);
+//        }
+//    }
 
     public static void heapInsert(int[] arr, int index) {
         int par = (index - 1) / 2;
@@ -74,7 +82,10 @@ public class KthLargestElement {
 //        a = arr[x] > arr[x + 1] ? x + 1 : x;
 //        b = arr[x] < arr[x + 1] ? x : x + 1;
 //        System.out.print(a + " " + b);
-        heapSort(arr);
-        for (int i : arr) System.out.print(i + " ");
+//        heapSort(arr);
+//        for (int i : arr) System.out.print(i + " ");
+        System.out.println();
+        int res = findKthLargest(arr, 6);
+        System.out.print(res);
     }
 }
