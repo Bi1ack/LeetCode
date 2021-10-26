@@ -1,5 +1,6 @@
 package Sorting;
 
+import java.util.PriorityQueue;
 import java.util.Random;
 
 /**
@@ -11,6 +12,17 @@ public class KthLargestElement {
      * @param arr : a sorted array
      * @param k   : k-th largest num
      */
+
+//    public static int findKthLargest(int[] nums, int k) {
+//        PriorityQueue<Integer> pq = new PriorityQueue<>(); // 小顶堆
+//        for (int val : nums) {
+//            pq.add(val);
+//            if (pq.size() > k)  // 维护堆的大小为 K
+//                pq.poll();
+//        }
+//        return pq.peek();
+//    }
+
     public static int findKthLargest(int[] arr, int k) {
         //todo
         for (int i = 0; i < k; i++) {

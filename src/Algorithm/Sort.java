@@ -84,32 +84,32 @@ public class Sort {
         return nums;
     }
 
-    public static void mSort(int[] nums, int l, int r) {
-        if (l < r) {
-            int mid = l + ((r - l) >> 1);
-            mSort(nums, l, mid);
-            mSort(nums, mid + 1, r);
-            merge(nums, l , mid, r);
+    public static void mSort(int[] nums, int left, int right) {
+        if (left < right) {
+            int mid = left + ((right - left) >> 1);
+            mSort(nums, left, mid);
+            mSort(nums, mid + 1, right);
+            merge(nums, left, mid, right);
         }
     }
 
-    public static void merge(int[] nums, int l, int mid, int r) {
-        int[] temp = new int[r - l + 1];
-        int p1 = l;
+    public static void merge(int[] nums, int left, int mid, int right) {
+        int[] temp = new int[right - left + 1];
+        int p1 = left;
         int p2 = mid + 1;
         int i = 0;
-        while (p1 <= mid && p2 <= r) {
+        while (p1 <= mid && p2 <= right) {
             temp[i++] = nums[p1] < nums[p2] ? nums[p1++] : nums[p2++];
         }
         while (p1 <= mid) {
             temp[i++] = nums[p1++];
         }
-        while (p2 <= r) {
+        while (p2 <= right) {
             temp[i++] = nums[p2++];
         }
 
         for (int k = 0; k < temp.length; k++) {
-            nums[l + k] = temp[k];
+            nums[left + k] = temp[k];
         }
     }
 
