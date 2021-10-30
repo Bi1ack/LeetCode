@@ -30,20 +30,20 @@ public class NextGreaterElement {
     }
 
     //单调栈 + 哈希表 O(m + n)
-    public int[] nextGreaterElement_(int[] nums1, int[] nums2) {
+    public static int[] nextGreaterElement_(int[] arr1, int[] arr2) {
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
         Deque<Integer> stack = new ArrayDeque<Integer>();
-        for (int i = nums2.length - 1; i >= 0; --i) {
-            int num = nums2[i];
+        for (int i = arr2.length - 1; i >= 0; --i) {
+            int num = arr2[i];
             while (!stack.isEmpty() && num >= stack.peek()) {
                 stack.pop();
             }
             map.put(num, stack.isEmpty() ? -1 : stack.peek());
             stack.push(num);
         }
-        int[] res = new int[nums1.length];
-        for (int i = 0; i < nums1.length; ++i) {
-            res[i] = map.get(nums1[i]);
+        int[] res = new int[arr1.length];
+        for (int i = 0; i < arr1.length; ++i) {
+            res[i] = map.get(arr1[i]);
         }
         return res;
     }
@@ -53,7 +53,7 @@ public class NextGreaterElement {
         int[] arr1 = new int[]{2,4,3,7,1};
         int[] arr2 = new int[]{1,2,3,4,5,6,7};
         int[] res;
-        res = nextGreaterElement(arr1, arr2);
+        res = nextGreaterElement_(arr1, arr2);
         for (int a : res) System.out.print(a + " ");
     }
 }

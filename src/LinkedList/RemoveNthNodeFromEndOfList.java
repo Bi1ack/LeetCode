@@ -6,22 +6,6 @@ import java.util.LinkedList;
 import java.util.Stack;
 
 public class RemoveNthNodeFromEndOfList {
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 
     public ListNode removeNthFromEnc_stack(ListNode head, int n) {
 //        Stack<ListNode> stack = new Stack<ListNode>();

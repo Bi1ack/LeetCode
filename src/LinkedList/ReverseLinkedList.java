@@ -7,26 +7,10 @@ import java.util.Stack;
  * @date 2021.10.30
  */
 public class ReverseLinkedList {
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 
     public ListNode reverseList_stack(ListNode head) {
         if (head == null || head.next == null) return head;
-        Stack<ListNode> stack = new Stack<ListNode>();
+        Stack<ListNode> stack = new Stack<>();
         ListNode p = head;
         while (p != null) {
             stack.push(p);

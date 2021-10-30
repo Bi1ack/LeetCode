@@ -24,7 +24,6 @@ public class KthLargestElement {
 //    }
 
     public static int findKthLargest(int[] arr, int k) {
-        //todo
         for (int i = 0; i < k; i++) {
             heapInsert(arr, i);
         }

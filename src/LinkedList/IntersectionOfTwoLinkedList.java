@@ -7,17 +7,18 @@ import java.util.Set;
  * @author zr
  * @date 2021.10.30
  */
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-        next = null;
-    }
-}
-
 public class IntersectionOfTwoLinkedList {
+
+    public static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
+
     //for test
     //https://leetcode-cn.com/problems/intersection-of-two-linked-lists/
     public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
