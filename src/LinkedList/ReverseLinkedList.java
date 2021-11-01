@@ -35,6 +35,6 @@ public class ReverseLinkedList {
             pre = p;
             p = q;
         }
-        return p;
+        return pre;
     }
 }
