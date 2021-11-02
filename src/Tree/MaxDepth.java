@@ -41,7 +41,8 @@ public class MaxDepth {
         return Math.max(getTreeDepth(root.left), getTreeDepth(root.right)) +1;
     }
 
-    //迭代
+    //迭代 层次遍历
+    //todo
     public int maxDepth_2(TreeNode root) {
         int depth = 0, res = depth;
         Stack<TreeNode> stack = new Stack<>();
