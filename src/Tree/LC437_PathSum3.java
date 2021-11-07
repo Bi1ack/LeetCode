@@ -1,5 +1,7 @@
 package Tree;
 
+import DataStructure.TreeNode;
+
 /**
  * @program: LeetCode
  * @description: Path Sum Ⅲ

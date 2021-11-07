@@ -1,6 +1,8 @@
 package Tree;
 
 
+import DataStructure.TreeNode;
+
 /**
  * @program: LeetCode
  * @description: 判断一棵树是否是另一棵树的子树

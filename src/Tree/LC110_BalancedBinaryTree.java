@@ -1,5 +1,7 @@
 package Tree;
 
+import DataStructure.TreeNode;
+
 /**
  * @program: LeetCode
  * @description: 判断是否是平衡二叉树
