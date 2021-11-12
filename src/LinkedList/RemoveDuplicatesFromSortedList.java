@@ -1,6 +1,8 @@
 package LinkedList;
 
 
+import DataStructure.ListNode;
+
 public class RemoveDuplicatesFromSortedList {
 
     public static ListNode deleteDuplicates(ListNode head) {

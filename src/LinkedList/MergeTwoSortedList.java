@@ -1,5 +1,7 @@
 package LinkedList;
 
+import DataStructure.ListNode;
+
 /**
  * @author zr
  * @date 2021.10.30

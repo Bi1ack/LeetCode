@@ -1,5 +1,7 @@
 package LinkedList;
 
+import DataStructure.ListNode;
+
 import java.util.Stack;
 
 /**
