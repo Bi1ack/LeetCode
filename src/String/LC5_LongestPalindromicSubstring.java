@@ -27,7 +27,6 @@ public class LC5_LongestPalindromicSubstring {
         int right = -1;
         int center = -1;
         int res = 0;
-        int k = 0;
         int[] p = new int[ch.length];
         for (int i = 0; i < ch.length; ++i) {
             if (i > right) {
