@@ -13,7 +13,7 @@ public class LC645_SetMismatch {
 
     // 数组哈希 O(n) O(n)
     public int[] findErrorNums_hash(int[] nums) {
-        int a = -1,b = -1;
+        int a = -1, b = -1;
         int[] arr = new int[nums.length];
         for (int i = 0; i < nums.length; ++i) {
             if (arr[nums[i] - 1] == 0) {
