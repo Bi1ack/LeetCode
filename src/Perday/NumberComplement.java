@@ -22,6 +22,16 @@ public class NumberComplement {
         return num ^ tmp;
     }
 
+    public int findComplement1(int num) {
+        int mask = num;
+        mask |= mask >> 1;
+        mask |= mask >> 2;
+        mask |= mask >> 4;
+        mask |= mask >> 8;
+        mask |= mask >> 16;
+        return (mask ^ num);
+    }
+
     public static void main(String[] args) {
         int a = 17;
         int res = findComplement(a);
