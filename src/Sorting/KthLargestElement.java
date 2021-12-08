@@ -80,6 +80,21 @@ public class KthLargestElement {
         arr[j] = tmp;
     }
 
+    public int findKthLargest_PriorityQueue(int[] arr, int k) {
+        // 优先级队列 == 最小堆
+        PriorityQueue<Integer> heap = new PriorityQueue<>();
+        for (int i = 0; i < k; ++i) {
+            heap.add(arr[i]);
+        }
+        for (int i = k; i < arr.length; ++i) {
+            if (arr[i] > heap.peek()) {
+                heap.poll();
+                heap.add(arr[i]);
+            }
+        }
+        return heap.peek();
+    }
+
     public static void main(String[] args) {
         int[] arr = new int[10];
         Random random = new Random();
