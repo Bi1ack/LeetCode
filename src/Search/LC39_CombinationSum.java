@@ -73,11 +73,38 @@ public class LC39_CombinationSum {
         }
     }
 
+    // combination sum 3 -- lc 216
+    public static List<List<Integer>> combinationSum3 (int k, int n) {
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> combination = new ArrayList<>();
+        backtrack3(res, combination, k, n, 0, 1);
+
+        return res;
+    }
+
+    public static void backtrack3(List<List<Integer>> res, List<Integer> combination, int k, int n, int sum, int start) {
+        if (combination.size() == k && sum == n) {
+            res.add(new ArrayList<>(combination));
+            return;
+        }
+
+        if (combination.size() >= k) return;
+
+        for (int i = start; i <= 9; ++i) {
+            if (sum + i > n) return;
+            combination.add(i);
+            sum += i;
+            backtrack3(res, combination, k, n, sum, i + 1);
+            sum -= i;
+            combination.remove(combination.size() - 1);
+        }
+    }
+
 
     public static void main(String[] args) {
         int[] candidates = {2,5,2,1,2};
         int target = 5;
-        List<List<Integer>> res = combinationSum(candidates, target);
+        List<List<Integer>> res = combinationSum3(3, 7);
         for (List<Integer> r : res) {
             System.out.println(r);
         }
