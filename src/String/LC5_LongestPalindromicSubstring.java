@@ -8,13 +8,9 @@ package String;
  **/
 public class LC5_LongestPalindromicSubstring {
 
-    // 中心扩展法 略
-
-    // DP // TODO: 2021/11/19
-
     // Manacher
     // O(n) O(n)
-    public static String longestPalindrome(String s) {
+    public String longestPalindrome(String s) {
         // 字符串预处理
         StringBuffer sb = new StringBuffer("#");
         for (int i = 0; i < s.length(); ++i) {
@@ -56,7 +52,7 @@ public class LC5_LongestPalindromicSubstring {
     }
 
     // 返回回文半径
-    public static int extend(char[] ch, int i, int j) {
+    public int extend(char[] ch, int i, int j) {
         while (i >= 0 && j < ch.length && ch[i] == ch[j]) {
             --i;
             ++j;
@@ -66,6 +62,6 @@ public class LC5_LongestPalindromicSubstring {
 
     public static void main(String[] args) {
         String s = "babadada";
-        String ss = longestPalindrome(s);
+        // String ss = longestPalindrome(s);
     }
 }

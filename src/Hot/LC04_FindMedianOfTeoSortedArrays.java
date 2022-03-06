@@ -19,11 +19,11 @@ public class LC04_FindMedianOfTeoSortedArrays {
     }
 
     private double getMedian(int[] nums1, int i, int[] nums2, int j, int k) {
-        // 寻找第 k 小的数
+        // 寻找第 k 小的数 log(m + n)
         if (nums1.length - i > nums2.length - j) return getMedian(nums2, j, nums1, i, k);
         if (nums1.length <= i) return nums2[j + k - 1];
         if (k == 1) {
-             return Math.min(nums1[i], nums2[j]);
+            return Math.min(nums1[i], nums2[j]);
         } else {
             int index1 = Math.min(i + k / 2 - 1, nums1.length - 1);
             int index2 = j + k - k / 2 - 1;
