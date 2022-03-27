@@ -35,7 +35,6 @@ public class Code13_movingCount {
                 if (x < 0 || x >= help.length || y < 0 || y >= help[0].length || !help[x][y]) {
                     continue;
                 }
-
                 dfs(x, y, help);
             }
         }
