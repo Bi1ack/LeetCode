@@ -17,18 +17,9 @@ public class Code13_movingCount {
         for (int i = 0; i < m; ++i) {
             for (int j = 0; j < n; ++j) {
                 help[i][j] = bitSum(i, j) <= k;
-                if (help[i][j]) {
-                    ans++;
-                } else {
-                    break;
-                }
             }
-            if (!help[i][0]) break;
         }
-
-
-
-        //dfs(0, 0, help);
+        dfs(0, 0, help);
 
         return ans;
     }
