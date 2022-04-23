@@ -23,7 +23,6 @@ public class Code04_singleNumber {
             }
         }
         return ans;
-
     }
 
     public static void main(String[] args) {
