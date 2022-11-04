@@ -12,14 +12,14 @@ import java.util.List;
  **/
 public class LC78_SubSets {
 
-    public List<List<Integer>> subsets(int[] nums) {
+    public static List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> subSet = new ArrayList<>();
         backtrack(res, subSet, nums, 0);
         return res;
     }
 
-    public void backtrack(List<List<Integer>> res, List<Integer> subSet, int[] nums, int start){
+    public static void backtrack(List<List<Integer>> res, List<Integer> subSet, int[] nums, int start){
         res.add(new ArrayList<>(subSet));
         for (int i = start; i < nums.length; ++i) {
             subSet.add(nums[i]);
@@ -49,8 +49,8 @@ public class LC78_SubSets {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1,2,2};
-        List<List<Integer>> res = subsets2(nums);
+        int[] nums = {1,2,3};
+        List<List<Integer>> res = subsets(nums);
         for (List<Integer> r : res) {
             System.out.println(r);
         }

@@ -64,6 +64,7 @@ public class LC437_PathSum3 {
         head.left.right.right = new TreeNode(1);
 
         int ans = pathSum_prefix(head, 8);
+        System.out.println(ans);
     }
 
 }

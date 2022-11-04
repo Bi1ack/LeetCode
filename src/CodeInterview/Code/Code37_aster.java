@@ -1,7 +1,6 @@
 package CodeInterview.Code;
 
-import java.util.Arrays;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @program: LeetCode
@@ -70,6 +69,10 @@ public class Code37_aster {
 
     public static void main(String[] args) {
         int[] arr = {-3,1};
+        Map<Integer, Integer> map = new HashMap<>();
+        map.getOrDefault(0, 0);
         System.out.println(Arrays.toString(asteroidCollision(arr)));
+        List<List<Integer>> ans = new ArrayList<>();
+        ans.add(Arrays.asList(0, 0));
     }
 }

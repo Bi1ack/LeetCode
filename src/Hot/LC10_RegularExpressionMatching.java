@@ -42,7 +42,9 @@ public class LC10_RegularExpressionMatching {
     }
 
     public static void main(String[] args) {
-        String s = "ac";
-        String p = ".*";
+        String s = "aab";
+        String p = "c*a*b";
+        LC10_RegularExpressionMatching test = new LC10_RegularExpressionMatching();
+        System.out.println(test.isMatch(s, p));
     }
 }

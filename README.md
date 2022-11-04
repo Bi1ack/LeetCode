@@ -1,6 +1,6 @@
 # LeetCode
 #### 介绍
-LeetCode刷题,算法和数据结构
+LeetCode刷题, 算法和数据结构
 
 
 

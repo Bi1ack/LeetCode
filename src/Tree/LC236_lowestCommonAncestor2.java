@@ -17,8 +17,8 @@ public class LC236_lowestCommonAncestor2 {
         TreeNode right = lowest(root.right, p, q);
         if (left != null && right != null) {
              return root;
-         } else {
+        } else {
              return left == null? right : left;
-         }
+        }
     }
 }

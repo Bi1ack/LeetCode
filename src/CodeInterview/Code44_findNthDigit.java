@@ -39,20 +39,20 @@ public class Code44_findNthDigit {
     public static int findNthDigit_(int n) {
         int digit = 1;
         long start = 1;
-        long count = 9;
+        long count = 10;
         while (n > count) { // 1.
             n -= count;
             digit += 1;
             start *= 10;
             count = digit * start * 9;
         }
-        long num = start + (n - 1) / digit; // 2.
-        return Long.toString(num).charAt((n - 1) % digit) - '0'; // 3.
+        long num = start + n / digit; // 2.
+        return Long.toString(num).charAt(n % digit) - '0'; // 3.
     }
 
 
     public static void main(String[] args) {
-        int n = 11119;
+        int n = 20;
         System.out.println(findNthDigit_(n));
     }
 }

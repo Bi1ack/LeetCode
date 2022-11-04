@@ -78,7 +78,7 @@ public class Sort {
         return index - 1;
     }
 
-    // O(N * logN) 求解小和问题
+    // O(N * logN) 求解小和问题 稳定
     public static int[] mergeSort(int[] nums) {
         mSort(nums, 0, nums.length - 1);
         return nums;
@@ -99,7 +99,7 @@ public class Sort {
         int p2 = mid + 1;
         int i = 0;
         while (p1 <= mid && p2 <= right) {
-            temp[i++] = nums[p1] < nums[p2] ? nums[p1++] : nums[p2++];
+            temp[i++] = nums[p1] <= nums[p2] ? nums[p1++] : nums[p2++];
         }
         while (p1 <= mid) {
             temp[i++] = nums[p1++];
